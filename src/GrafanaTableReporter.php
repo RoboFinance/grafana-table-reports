@@ -78,7 +78,7 @@ class GrafanaTableReporter
      * @param string $format
      * @return array|resource
      */
-    public function getData(CarbonInterface $from, CarbonInterface $to, string $dashboardId, int $panelId, string $format = 'csv')
+    public function getData(CarbonInterface $from, CarbonInterface $to, string $dashboardId, int $panelId, string $format = 'csv-resource')
     {
         $response = $this->guzzle->post($this->getBaseUrl() . '/api/tsdb/query/', [
             'headers' => [
@@ -107,7 +107,7 @@ class GrafanaTableReporter
         $data = json_decode($response->getBody()->getContents(), true);
         $table = $data['results']['A']['tables'][0];
 
-        if ($format === 'csv') {
+        if ($format === 'csv-resource') {
             return $this->buildCsv($table);
         }
 
