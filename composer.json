@@ -1,0 +1,27 @@
+{
+  "name": "robocash/grafana-table-reports",
+  "type": "library",
+  "require": {
+    "php": ">=7.2",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "authors": [
+    {
+      "name": "bu4ak",
+      "email": "igorbu4@gmail.com"
+    }
+  ],
+  "description": "",
+  "autoload": {
+    "psr-4": {
+      "Robocash\\GrafanaTableReporter\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Robocash\\GrafanaTableReporter\\Laravel\\GrafanaTableReporterServiceProvider"
+      ]
+    }
+  }
+}
