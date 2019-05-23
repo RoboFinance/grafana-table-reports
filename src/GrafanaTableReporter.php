@@ -87,14 +87,13 @@ class GrafanaTableReporter
             ],
             'body' => json_encode(
                 [
-                    'from' => (string)($from->getTimestamp() * 1000),
-                    'to' => (string)($to->getTimestamp() * 1000 + 999),
+                    'from' => (string)(($from->getTimestamp() + $from->getOffset()) * 1000), // получаем timestamp с учетом часового пояса
+                    'to' => (string)(($to->getTimestamp() + $from->getOffset()) * 1000 + 999),
                     'queries' =>
                         [
                             0 =>
                                 [
                                     'refId' => 'A',
-                                    'intervalMs' => 1800000,
                                     'datasourceId' => 1,
                                     'rawSql' => $this->getSql($dashboardId, $panelId),
                                     'format' => 'table',
