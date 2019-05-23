@@ -88,7 +88,7 @@ class GrafanaTableReporter
             'body' => json_encode(
                 [
                     'from' => (string)($from->getTimestamp() * 1000),
-                    'to' => (string)($to->getTimestamp() * 1000),
+                    'to' => (string)($to->getTimestamp() * 1000 + 999),
                     'queries' =>
                         [
                             0 =>
