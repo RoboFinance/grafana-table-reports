@@ -59,6 +59,7 @@ class GrafanaTableReporter
     private function getSql(string $dashboardId, int $panelId): string
     {
         $response = $this->guzzle->get($this->getBaseUrl() . '/api/dashboards/uid/' . $dashboardId, [
+            'verify' => false,
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->getApiToken()
             ]
@@ -81,6 +82,7 @@ class GrafanaTableReporter
     public function getData(CarbonInterface $from, CarbonInterface $to, string $dashboardId, int $panelId, string $format = 'csv-resource')
     {
         $response = $this->guzzle->post($this->getBaseUrl() . '/api/tsdb/query/', [
+            'verify' => false,
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->getApiToken(),
                 'Content-Type' => 'application/json;charset=UTF-8'
