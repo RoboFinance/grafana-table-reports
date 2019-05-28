@@ -27,6 +27,7 @@ $from = \Carbon\Carbon::now()->subDays(10);
 $to = \Carbon\Carbon::now();
 $panelId = 1;
 $format = 'csv-resource';
+$dashboardId = 'tiTI4O2ic';
 $reporter->getData($from, $to, $dashboardId, $panelId, $format);
 ```
 
