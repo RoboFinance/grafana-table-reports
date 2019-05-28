@@ -1,5 +1,5 @@
 {
-  "name": "RoboFinance/grafana-table-reports",
+  "name": "robo-finance/grafana-table-reports",
   "type": "library",
   "require": {
     "php": ">=7.2",
