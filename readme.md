@@ -12,10 +12,12 @@ php artisan vendor:publish --provider="Robocash\GrafanaTableReporter\Laravel\Gra
 ```
 See and edit the following in grafana_table_reporter.php or kindly use env variables:
 
-``[
+```php
+[
       'base_url' => env('GRAFANA_TABLE_REPORTER_BASE_URL', 'https://test.com'), // Grafana base url
       'api_token' => env('GRAFANA_TABLE_REPORTER_API_TOKEN', '') //Grafana Api  token
-  ]``
+  ]
+  ```
 
 
 # How to use code as framework-independent
