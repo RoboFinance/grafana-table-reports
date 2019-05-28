@@ -1,6 +1,6 @@
 <?php
 
-namespace Robocash\GrafanaTableReporter;
+namespace RoboFinance\GrafanaTableReporter;
 
 use Carbon\CarbonInterface;
 use GuzzleHttp\Client;

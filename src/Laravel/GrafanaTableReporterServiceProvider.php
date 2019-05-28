@@ -1,8 +1,8 @@
 <?php
 
-namespace Robocash\GrafanaTableReporter\Laravel;
+namespace RoboFinance\GrafanaTableReporter\Laravel;
 
-use Robocash\GrafanaTableReporter\GrafanaTableReporter;
+use RoboFinance\GrafanaTableReporter\GrafanaTableReporter;
 use Illuminate\Support\ServiceProvider;
 
 class GrafanaTableReporterServiceProvider extends ServiceProvider

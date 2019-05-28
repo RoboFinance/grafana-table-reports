@@ -16,13 +16,13 @@
   "description": "",
   "autoload": {
     "psr-4": {
-      "Robocash\\GrafanaTableReporter\\": "src/"
+      "RoboFinance\\GrafanaTableReporter\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Robocash\\GrafanaTableReporter\\Laravel\\GrafanaTableReporterServiceProvider"
+        "RoboFinance\\GrafanaTableReporter\\Laravel\\GrafanaTableReporterServiceProvider"
       ]
     }
   }

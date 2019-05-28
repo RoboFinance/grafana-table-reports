@@ -8,7 +8,7 @@ Optimized to Laravel 5.5+ and framework-independent.
 
 # Configuration Laravel 5.5+
 ```bash
-php artisan vendor:publish --provider="Robocash\GrafanaTableReporter\Laravel\GrafanaTableReporterServiceProvider"
+php artisan vendor:publish --provider="RoboFinance\GrafanaTableReporter\Laravel\GrafanaTableReporterServiceProvider"
 ```
 See and edit the following in grafana_table_reporter.php or kindly use env variables:
 
