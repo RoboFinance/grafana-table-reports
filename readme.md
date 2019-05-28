@@ -4,7 +4,7 @@ Optimized to Laravel 5.5+ and framework-independent.
 
 
 # Installation
-``composer require RoboFinance/grafana-table-reports``
+``composer require robo-finance/grafana-table-reports``
 
 # Configuration Laravel 5.5+
 ```bash
