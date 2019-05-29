@@ -10,15 +10,23 @@ Optimized to Laravel 5.5+ and framework-independent.
 ```bash
 php artisan vendor:publish --provider="RoboFinance\GrafanaTableReporter\Laravel\GrafanaTableReporterServiceProvider"
 ```
-See and edit the following in grafana_table_reporter.php or kindly use env variables:
+See and edit the following in `grafana_table_reporter.php` or kindly use .env variables:
 
 ```php
 [
       'base_url' => env('GRAFANA_TABLE_REPORTER_BASE_URL', 'https://test.com'), // Grafana base url
       'api_token' => env('GRAFANA_TABLE_REPORTER_API_TOKEN', '') //Grafana Api  token
-  ]
-  ```
-
+]
+```
+# Using with Laravel
+```php
+class IndexController extends Controller
+{
+    public function index(GrafanaTableReporter $reporter)
+    {
+        $reporter->getData(now()->subDays(30), now(), 'tiTI4O2ic', 21);
+        ...
+```
 
 # How to use code as framework-independent
 ```php
